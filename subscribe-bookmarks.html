@@ -1,0 +1,79 @@
+
+<html>
+<body>
+
+<p>
+Drag these links into your bookmarks.  Sign into steam in your browser and go
+to one of the guide pages.  A link to the Axe guide is provided.  You can test
+subscribing to the Axe guide to see if the bookmarklet works.  Refresh the page
+to see if it worked.
+</p>
+
+<a href="javascript:(function() {
+    var ids = [
+    128726494,
+    ];
+    if (document.getElementById('PublishedFileSubscribe') === null) {
+        alert('You must be on a guide page.');
+    } else {
+        if (!confirm('Really subscribe to the guides?  This can take a while and make lots of HTTP requests.')) {
+            return;
+        }
+        jQuery.each(ids, function(k, v) {
+            document.forms['PublishedFileSubscribe']['id'].value = v;
+            $('PublishedFileSubscribe').request({asynchronous: false});
+            });
+        alert('Done subscribing');
+    }
+})();
+">Subscribe Axe Guide</a>
+
+<br>
+
+<a href="javascript:(function() {
+    var ids = [
+    128726494, 128728638, 128730475, 128732275, 128734250, 128735861,
+    128741319, 128742802, 128743885, 128745244, 128746588, 128748151,
+    128751287, 128752632, 128753951, 128754907, 128756420, 128757681,
+    128851981, 128855291, 128858659, 128862386, 128866569, 128871463,
+    128873254, 128876778, 128882317, 128887479, 128891336, 128895761,
+    128898296, 128899869, 128903691, 128906539, 128909765, 128912519,
+    128914193, 128917369, 128918471, 128920907, 128922664, 128925332,
+    128927319, 128929132, 128932114, 128937771, 128945163, 128956358,
+    128960249, 128972272, 129056935, 129060054, 129062086, 129063701,
+    129064094, 129065509, 129067853, 129069615, 129072324, 129076227,
+    129079469, 129081035, 129081331, 129083818, 129085778, 129093311,
+    129096483, 129098268, 129100110, 129102427, 129105276, 129107725,
+    129109889, 129111538, 129119115, 129130896, 129134687, 129137630,
+    129143802, 129149991, 129157199, 129191918, 129193377, 129204328,
+    129323738, 129331714, 129332354, 129332786, 129334727, 129381491,
+    129399377, 129399862, 129400259, 129400559, 129400942, 129402256,
+    129402805, 129403206, 134962374, 140111731, 143016376, 143243384,
+    159698040, 161358226, 165334812, 176984007, 195048794, 195052251,
+    203428541, 203428546, 222262678, 222264754, 222265746, 232338429,
+    232367327, 232415624, 232946791, 251934276, 251941747, 251982939,
+    254615876, 261777247, 269700420, 269705502, 286891439, 286895078,
+    286904891, 301732264, 301735208, 309919893, 319085962, 319092788,
+    319092835, 319101948, 319106719, 319109248, 319111870, 319114879,
+    330545830, 334021836, 344511398, 344512092, 356791078, 359580647,
+    ];
+    if (document.getElementById('PublishedFileSubscribe') === null) {
+        alert('You must be on a guide page.');
+    } else {
+        if (!confirm('Really subscribe to the guides?  This can take a while and make lots of HTTP requests.')) {
+            return;
+        }
+        jQuery.each(ids, function(k, v) {
+            document.forms['PublishedFileSubscribe']['id'].value = v;
+            $('PublishedFileSubscribe').request({asynchronous: false});
+            });
+        alert('Done subscribing');
+    }
+})();
+">Subscribe All Guides (slow)</a>
+
+<br>
+
+<a href="http://steamcommunity.com/sharedfiles/filedetails/?id=128726494">Axe Guide Page</a>
+</body>
+</html>
